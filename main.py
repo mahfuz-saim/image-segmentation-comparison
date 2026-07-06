@@ -5,11 +5,13 @@ import numpy as np
 import config
 from algorithms.sobel_segmenter import SobelSegmenter
 from algorithms.prewitt_segmenter import PrewittSegmenter
-from algorithms.log_segmenter import LoGSegmenter
+from algorithms.region_growing_segmenter import RegionGrowingSegmenter
+from algorithms.watershed_segmenter import WatershedSegmenter
 from algorithms.canny_segmenter import CannySegmenter
 from utils.image_loader import load_image
 from utils.visualization import create_comparison_plot
 from utils.metrics import get_basic_stats
+from utils.chart import create_comparison_barcharts
 
 def main():
     # 1. Setup folders
@@ -27,7 +29,8 @@ def main():
     segmenters = {
         "Sobel": SobelSegmenter(config.SOBEL_RES),
         "Prewitt": PrewittSegmenter(config.PREWITT_RES),
-        "LoG": LoGSegmenter(config.LOG_RES),
+        "Region Growing": RegionGrowingSegmenter(config.REGION_RES),
+        "Watershed": WatershedSegmenter(config.WATERSHED_RES),
         "Canny": CannySegmenter(config.CANNY_RES)
     }
 
@@ -74,3 +77,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    create_comparison_barcharts(config.COMPARISON_RES, config.COMPARISON_RES)

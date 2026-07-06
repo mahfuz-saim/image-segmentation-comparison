@@ -1,6 +1,7 @@
 Algorithm    | Time(ms)   | Regions  | Edge Pixels 
 -------------------------------------------------------
-Sobel        | 10.81      |       15 |         4678
-Prewitt      | 6.94       |       94 |         3853
-LoG          | 6.18       |       13 |         1820
-Canny        | 4.51       |        3 |         3315
+Sobel        | 12.23      |       15 |         4678
+Prewitt      | 8.14       |       94 |         3853
+Region Growing | 2.75       |        1 |           79
+Watershed    | 6.45       |        1 |         1799
+Canny        | 4.55       |        3 |         3315

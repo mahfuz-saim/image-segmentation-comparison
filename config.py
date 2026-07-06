@@ -10,7 +10,8 @@ RESULTS_DIR = os.path.join(BASE_DIR, "results")
 # Algorithm Results Directories
 SOBEL_RES = os.path.join(RESULTS_DIR, "sobel")
 PREWITT_RES = os.path.join(RESULTS_DIR, "prewitt")
-LOG_RES = os.path.join(RESULTS_DIR, "log")
+REGION_RES = os.path.join(RESULTS_DIR, "region")
+WATERSHED_RES = os.path.join(RESULTS_DIR, "watershed")
 CANNY_RES = os.path.join(RESULTS_DIR, "canny")
 COMPARISON_RES = os.path.join(RESULTS_DIR, "comparison")
 
